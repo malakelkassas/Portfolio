@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malak-Elkassas.Portfolio</title>
+    <link rel="shortcut icon" href="./img/favaicon.png" type="image/x-icon">
+    <link href="./src/output.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50">
+      <div class=" antialiased bg-gray-100 dark:bg-gray-900">
+        <div
+          class="w-full text-gray-700 bg-gradient-to-r from-blue-950 to-violet-950 dark:text-gray-200 dark:bg-gray-800">
+          <div x-data="{ open: true }"
+            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="flex flex-row items-center justify-between p-4">
+              <a href="#"
+                class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">MALAK</a>
+              <button
+                class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+                @click="open = !open">
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                  <path x-show="!open" fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+                  <path x-show="open" fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}"
+              class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white"
+                href="#home">Home</a>
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white"
+                href="#about">About</a>
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white"
+                href="#service">Service</a>
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white"
+                href="#work">Work</a>
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white"
+                href="#contact">Contact</a>
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white">
+                <button
+                  id="modeToggle"
+                  title="Toggle Theme"
+                  class="
+        w-12 
+        h-6 
+        rounded-full 
+        p-1 
+        bg-gray-400 
+        dark:bg-gray-600 
+        relative 
+        transition-colors 
+        duration-500 
+        ease-in
+        focus:outline-none 
+        focus:ring-2 
+        focus:ring-blue-700 
+        dark:focus:ring-blue-600 
+        focus:border-transparent
+      ">
+                  <div id="toggleCircle"
+                    class="
+            rounded-full 
+            w-4 
+            h-4 
+            bg-blue-600 
+            dark:bg-blue-500 
+            relative 
+            transition-all 
+            duration-300 
+            ease-out
+        ">
+                  </div>
+                </button> </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- sec1 -->
+    <section id="home">
+      <div class="home">
+        <div class="home1">
+          <div class="home2 animate-on-scroll">
+            <h1 class="text-5xl mb-5">Iam Malak ELkassas</h1>
+            <h2 class="text-4xl"> <span
+                class="bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-3xl font-extrabold text-transparent"></span></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- sec2 -->
+    <section id="about"
+      class="flex flex-wrap p-10 overflow-hidden animate-on-scroll">
+      <div class="w-full md:w-1/2">
+        <div class="relative w-3/4">
+          <img src="./img/My.img.jpg" class="rounded-full w-full h-full" alt>
+          <span
+            class="absolute top-0 left-0 w-full h-full border-l-6 border-r-6 border-indigo-900 rounded-full animate-span-slow"></span>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2">
+        <h1
+          class="text-center bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-6xl font-extrabold text-transparent p-10">About</h1>
+        <p
+          class="text-gray-700 text-toggle px-5 text-lg md:text-xl font-medium leading-relaxed">Hi,
+          I’m Malak 👋
+          I’m a passionate Front-End Developer with strong skills in React,
+          HTML, CSS, and JavaScript.
+          I specialize in turning Figma designs into responsive, user-friendly
+          websites, and integrating APIs to build dynamic web applications.
+          My focus is on writing clean code, creating smooth user experiences,
+          and continuously improving my skills to deliver modern and effective
+          web solutions.
+        </p>
+        <ul
+          class="mt-5 space-y-4 text-gray-800 text-pase md:text-lg text-toggle font-medium px-10">
+          <li><strong
+              class="text-2xl bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">Name:
+            </strong>Malak Khaled Elkassas</li>
+          <li><strong
+              class="text-2xl bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">Email:
+            </strong>elkassasmalak24@gmail.com</li>
+          <li><strong
+              class="text-2xl bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">Phone:
+            </strong>+20 1023203853</li>
+        </ul>
+        <a href="./Malak Khaled Elkassas.pdf" download target="_blank"
+          class="mx-5 px-5 mt-5 py-3 inline-block bg-gradient-to-r from-pink-500 to-violet-500 text-white rounded-lg shadow-md font-semibold transition hover:bg-transparent hover:bg-linear-to-r hover:from-pink-500 hover:to-violet-500 hover:bg-clip-text hover:font-extrabold hover:text-transparent ">Download
+          Cv</a>
+      </div>
+
+    </section>
+    <!-- sec3 -->
+    <section id="service" class="py-12 px-4 md:px-8 animate-on-scroll">
+      <h1
+        class="text-center bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-6xl font-extrabold text-transparent p-10">Services</h1>
+
+      <div class="grid gap-6
+              grid-cols-1
+              sm:grid-cols-2
+              lg:grid-cols-3
+              xl:grid-cols-3
+              max-w-6xl mx-auto">
+        <!-- Card 1 -->
+        <div
+          class="group block rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-md dark:shadow-none
+              transform-gpu transition-transform duration-300 ease-out
+              hover:scale-105 focus:scale-105 active:scale-100
+              outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-900
+              p-6"
+          aria-label="Responsive Web Design"
+          tabindex="0">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div
+                class="w-14 h-14 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24"><path stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"
+                    d="M3 7h18M3 12h18M3 17h18" /></svg>
+              </div>
+            </div>
+
+            <div class="flex-1">
+              <h3
+                class="text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">Responsive
+                Web Design</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">Build clean,
+                mobile-first layouts that adapt to any screen size.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="group block rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-md transform-gpu transition-transform duration-300 ease-out hover:scale-105 focus:scale-105 outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-900 p-6"
+          aria-label="Front-End Development" tabindex="0">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div
+                class="w-14 h-14 rounded-lg bg-green-50 dark:bg-green-900/30 flex items-center justify-center text-green-600 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24"><path stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"
+                    d="M12 20l9-5-9-5-9 5 9 5z" /></svg>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3
+                class="text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">Front-End
+                Development</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">Modern
+                interfaces with HTML, CSS, JS and React — optimized for
+                performance.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="group block rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-md transform-gpu transition-transform duration-300 ease-out hover:scale-105 focus:scale-105 outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-900 p-6"
+          aria-label="Figma to Code" tabindex="0">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div
+                class="w-14 h-14 rounded-lg bg-yellow-50 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24"><path stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"
+                    d="M7 8h10M7 12h8m-8 4h6" /></svg>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3
+                class="text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">Figma
+                to Code</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">Pixel-perfect
+                conversion from designs to production-ready code.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="group block rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-md
+          transform-gpu transition-transform duration-300 ease-out
+          hover:scale-105 focus:scale-105 active:scale-100
+          outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-900
+          p-6"
+          aria-label="API Integration"
+          tabindex="0">
+          <div class="flex items-start gap-4">
+            <!-- أيقونة -->
+            <div class="flex-shrink-0">
+              <div
+                class="w-14 h-14 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform duration-300">
+                <!-- أيقونة API -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 17v-6a2 2 0 012-2h6m6 0h2a2 2 0 012 2v6m-8 4h.01M12 3v1m0 16v1m-6-6h1m10 0h1" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- محتوى -->
+            <div class="flex-1">
+              <h3
+                class="text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">API
+                Integration</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">
+                Connecting front-end apps with back-end services through RESTful
+                APIs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div
+          class="group block rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-md
+          transform-gpu transition-transform duration-300 ease-out
+          hover:scale-105 focus:scale-105 active:scale-100
+          outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-900
+          p-6"
+          aria-label="Bootstrap & TailwindCSS"
+          tabindex="0">
+          <div class="flex items-start gap-4 ">
+            <!-- أيقونة -->
+            <div class="flex-shrink-0">
+              <div
+                class="w-14 h-14 rounded-lg bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 group-hover:scale-110 transition-transform duration-300">
+                <!-- أيقونة framework -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- محتوى -->
+            <div class="flex-1">
+              <h3
+                class="text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">Bootstrap
+                & TailwindCSS</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">
+                Building responsive, modern, and professional designs using both
+                Bootstrap and Tailwind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- sec4 -->
+    <section id="work" class="py-12 px-4 md:px-8 animate-on-scroll">
+      <h1
+        class="text-center bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-6xl font-extrabold text-transparent p-10">Work</h1>
+
+      <div
+        class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+
+        <!-- Project 1 -->
+        <a href="https://malakelkassas.github.io/Crud/" target="_blank"
+          class="group block rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-md
+              transform-gpu transition-transform duration-300 ease-out
+              hover:scale-105 focus:scale-105 active:scale-100
+              outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-900">
+
+          <div class="h-48 overflow-hidden">
+            <img src="./img/Crud.png" alt="Project 1"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+
+          <div class="p-6">
+            <h2
+              class="text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">CRUD
+              Website</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              A responsive web app that allows users to
+              create, read, update, and delete data dynamically. Built with
+              HTML, Bootstrap, and JavaScript.
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://malakelkassas.github.io/TechNova/" target="_blank"
+          class="group block rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-md
+              transform-gpu transition-transform duration-300 ease-out
+              hover:scale-105 focus:scale-105 active:scale-100
+              outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-900">
+
+          <div class="h-48 overflow-hidden">
+            <img src="./img/TechNova.png" alt="Project 2"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+
+          <div class="p-6">
+            <h2
+              class="text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">TechNova
+              Project</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              A modern and responsive web platform featuring interactive tools
+              and project showcases. Built with HTML, CSS.
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="https://trends-ruby-five.vercel.app/" target="_blank"
+          class="group block rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-md
+              transform-gpu transition-transform duration-300 ease-out
+              hover:scale-105 focus:scale-105 active:scale-100
+              outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-900">
+
+          <div class="h-48 overflow-hidden">
+            <img src="./img/Trends.png" alt="Project 3"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+
+          <div class="p-6">
+            <h2
+              class="text-lg font-semibold mb-1 text-gray-900 dark:text-gray-100">Trends
+              Ruby</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              A dynamic React-based web app that fetches real data
+              via an API and includes token-based authentication. Built using
+              React, Vite, API integration, and secure token management to
+              deliver a modern and responsive user experience.
+            </p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+    <!-- sec5 -->
+    <section id="contact" class="contact-section animate-on-scroll">
+      <h1
+        class="text-center bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-6xl font-extrabold text-transparent p-10">Contact
+        Me</h1>
+      <p>If you’d like to work with me or have any questions, feel free to reach
+        out 👇</p>
+      <form id="contact-form" class="py-12 px-4 md:px-8 contact-form"
+        action="https://formspree.io/f/manbgvdg" method="POST">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message"
+          required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <!-- مكان الرسالة -->
+      <div id="form-message"></div>
+      <div class="social-links">
+        <a href="mailto:elkassasmalak24@gmail.com" target="_blank"> <i
+            class="fas fa-envelope"></i>elkassasmalak24@gmail.com </a>
+
+        <a href="tel:+201023203853"> <i class="fas fa-phone"></i> +20 102 320
+          3853 </a>
+        <a href="https://github.com/malakelkassas" target="_blank"> <i
+            class="fab fa-github"></i> GitHub </a>
+
+        <a href="https://linkedin.com/in/malak-elkassas-070a35385"
+          target="_blank"> <i
+            class="fab fa-linkedin"></i> LinkedIn </a>
+
+      </div>
+    </section>
+    <script src="./style.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer></script>
+  </body>
+</html>

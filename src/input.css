@@ -1,0 +1,351 @@
+@import "tailwindcss";
+
+.home {
+  background-image: url(../img/Cover.png);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.home2 h2 span::after {
+  content: "|";
+  animation-name: flextext;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flextext {
+  0% {
+    content: "|";
+  }
+
+  3% {
+    content: "F|";
+  }
+
+  6% {
+    content: "Fr|";
+  }
+
+  9% {
+    content: "Fro|";
+  }
+
+  12% {
+    content: "Fron|";
+  }
+
+  15% {
+    content: "Front|";
+  }
+
+  18% {
+    content: "Fronte|";
+  }
+
+  21% {
+    content: "Fronten|";
+  }
+
+  24% {
+    content: "Frontend|";
+  }
+
+  27% {
+    content: "Frontend D|";
+  }
+
+  30% {
+    content: "Frontend De|";
+  }
+
+  33% {
+    content: "Frontend Dev|";
+  }
+
+  36% {
+    content: "Frontend Deve|";
+  }
+
+  39% {
+    content: "Frontend Devel|";
+  }
+
+  42% {
+    content: "Frontend Develo|";
+  }
+
+  45% {
+    content: "Frontend Develop|";
+  }
+
+  48% {
+    content: "Frontend Develope|";
+  }
+
+  51% {
+    content: "Frontend Developer|";
+  }
+
+  54% {
+    content: "Frontend Develope|";
+  }
+
+  58% {
+    content: "Frontend Develop|";
+  }
+
+  61% {
+    content: "Frontend Develo|";
+  }
+
+  64% {
+    content: "Frontend Devel|";
+  }
+
+  67% {
+    content: "Frontend Deve|";
+  }
+
+  70% {
+    content: "Frontend Dev|";
+  }
+
+  73% {
+    content: "Frontend De|";
+  }
+
+  76% {
+    content: "Frontend D|";
+  }
+
+  79% {
+    content: "Frontend |";
+  }
+
+  80% {
+    content: "Frontend|";
+  }
+
+  83% {
+    content: "Fronten|";
+  }
+
+  86% {
+    content: "Fronte|";
+  }
+
+  89% {
+    content: "Front|";
+  }
+
+  92% {
+    content: "Fron|";
+  }
+
+  95% {
+    content: "Fro|";
+  }
+
+  98% {
+    content: "Fr|";
+  }
+
+  99% {
+    content: "F|";
+  }
+
+  100% {
+    content: "|";
+  }
+}
+
+.animate-span-slow {
+  animation: span-slow 5s linear infinite;
+}
+
+@keyframes span-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-section {
+  padding: 60px 20px;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 100px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #5600b2;
+  transition: width 0.4s ease;
+}
+
+.contact::after {
+  width: 60%;
+}
+
+.contact-section p {
+  margin-bottom: 20px;
+  color: #8e8d8d;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #6c63ff;
+}
+
+.contact-form button {
+  background: #6c63ff;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #5146d9;
+}
+
+#form-message {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.social-links {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff4d6d;
+}
+
+/* responsive for mobile */
+@media (max-width: 768px) {
+  bar-links {
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .cards-container,
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .project-card {
+    width: 90% !important;
+  }
+
+  .skills-container {
+    margin: 20px auto !important;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .profile-img img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .text {
+    font-size: large;
+    padding: 0 10px;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav {
+  transition: transform 0.3s ease-in-out;
+}
+nav.nav-hidden {
+  transform: translateY(-100%);
+}
+
+html.dark {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+
+html.dark .dark\:ml-6 {
+  margin-left: 1.5rem;
+}
+
+html.dark .dark\:bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
